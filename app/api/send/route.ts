@@ -1,27 +1,29 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
+export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
 
-const RESEND_API_KEY = "re_123456789";
+const resend = new Resend('re_123456789');
 
 export async function POST() {
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-    },
-    body: JSON.stringify({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["delivered@resend.dev"],
-      subject: "hello world",
-      html: "<strong>it works!</strong>",
-    }),
-  });
-
-  if (res.ok) {
-    const data = await res.json();
-    return NextResponse.json(data);
-  }
+    try {
+        const data = await resend.emails.send({
+            from: 'Acme <onboarding@resend.dev>',
+            to: ['delivered@resend.dev'],
+            subject: 'Hello World',
+            html: '<strong>It works!</strong>',
+        });
+        
+        return NextResponse.json({
+            statusCode: 200,
+            body: data,
+        });
+    }
+    catch (error) {
+        return NextResponse.json({
+            statusCode: 500,
+            body: error.message,
+        });
+    }
 }
