@@ -2,3 +2,4 @@
 .next
 .vercel
 node_modules
+next-env.d.ts
