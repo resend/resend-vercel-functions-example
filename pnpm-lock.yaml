@@ -23,8 +23,8 @@ devDependencies:
     specifier: 20.19.4
     version: 20.19.4
   '@types/react':
-    specifier: 18.3.3
-    version: 18.3.3
+    specifier: 18.3.26
+    version: 18.3.26
   typescript:
     specifier: 5.8.3
     version: 5.8.3
@@ -177,8 +177,8 @@ packages:
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
     dev: true
 
-  /@types/react@18.3.3:
-    resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
+  /@types/react@18.3.26:
+    resolution: {integrity: sha512-RFA/bURkcKzx/X9oumPG9Vp3D3JUgus/d0b67KB0t5S/raciymilkOa66olh78MUI92QLbEJevO7rvqU/kjwKA==}
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
