@@ -12,7 +12,7 @@
     "resend": "^6.4.0"
   },
   "devDependencies": {
-    "@types/node": "20.19.4",
+    "@types/node": "24.10.1",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "typescript": "5.8.3"
